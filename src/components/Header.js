@@ -36,7 +36,8 @@ export default function Header() {
             />
             <div className="text-center px-[110px]">
               <p className="font-bold text-lg">Prop: G.Shekar</p>
-              <p className="text-sm">Ph: 9640600112, 966749900</p>
+              <p className="text-sm">Ph: 9032698728, 9640600112</p>
+              <p className="text-sm">GSTIN: 36BXKPG2180H1ZH</p>
             </div>
             <img
               src={BharatBenzLogo}
