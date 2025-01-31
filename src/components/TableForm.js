@@ -23,6 +23,10 @@ export default function TableForm() {
     editRow,
   } = useContext(State);
 
+  // Calculate GST (18%)
+  const gst = total * 0.18;
+  const totalWithGst = total + gst;
+
   return (
     <>
       <ToastContainer position="top-right" theme="colored" />
@@ -122,10 +126,19 @@ export default function TableForm() {
         ))}
       </table>
 
+      {/* Total and GST Section */}
       <div>
         <h2 className="flex items-end justify-end text-gray-800 text-4xl font-bold">
           ₹ {total.toLocaleString()}.00
         </h2>
+        {/* GST Row */}
+        <h3 className="flex items-end justify-end text-gray-800 text-xl font-bold mt-2">
+          GST (18%): ₹ {gst.toLocaleString()}.00
+        </h3>
+        {/* Total with GST Row */}
+        <h3 className="flex items-end justify-end text-gray-800 text-xl font-bold mt-2">
+          Total with GST: ₹ {totalWithGst.toLocaleString()}.00
+        </h3>
       </div>
     </>
   );

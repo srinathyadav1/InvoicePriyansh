@@ -4,6 +4,10 @@ import { State } from "../context/stateContext";
 export default function Table() {
   const { list, total } = useContext(State);
 
+  // Calculate GST (18%)
+  const gst = total * 0.18;
+  const totalWithGst = total + gst;
+
   return (
     <>
       <table width="100%" className="mb-10 border border-gray-300">
@@ -30,6 +34,20 @@ export default function Table() {
               Total:
             </td>
             <td className="border-t border-gray-300 p-2">₹{total.toLocaleString()}.00</td>
+          </tr>
+          {/* GST Row */}
+          <tr className="bg-gray-100 font-bold h-10">
+            <td colSpan="3" className="text-right border-t border-gray-300 p-2">
+              GST (18%):
+            </td>
+            <td className="border-t border-gray-300 p-2">₹{gst.toLocaleString()}.00</td>
+          </tr>
+          {/* Total with GST Row */}
+          <tr className="bg-gray-100 font-bold h-10">
+            <td colSpan="3" className="text-right border-t border-gray-300 p-2">
+              Total with GST:
+            </td>
+            <td className="border-t border-gray-300 p-2">₹{totalWithGst.toLocaleString()}.00</td>
           </tr>
         </tbody>
       </table>
