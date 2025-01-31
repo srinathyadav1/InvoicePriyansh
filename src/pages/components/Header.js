@@ -59,6 +59,7 @@ export default function Header() {
       <div className="flex flex-col place-items-start space-y-1 mt-2">
         <h1 className="text-xl font-bold text-gray-800">G. shekar</h1>
         <h1 className="text-lg text-gray-800">Ph: 9032698728, 9640600112</h1>
+        <h1 className="text-lg text-gray-800">GSTIN: 36BXKPG2180H1ZH</h1>
       </div>
       <img
         src={SwarajMazdaLogo}
